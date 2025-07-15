@@ -1,0 +1,47 @@
+{
+  "name": "giants-intelligent-mcp-server",
+  "version": "1.0.0",
+  "description": "Intelligent MCP server for SF Giants baseball analysis with LLM integration",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "giants-intelligent-mcp-server": "server.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "jest",
+    "test:example": "node test-example.js",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write \"**/*.js\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.27.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^17.2.0",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.20.0",
+    "zod": "^3.22.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3"
+  },
+  "jest": {
+    "type": "module",
+    "testEnvironment": "node",
+    "transform": {}
+  },
+  "keywords": [
+    "mcp",
+    "mlb",
+    "giants",
+    "baseball",
+    "ai",
+    "llm",
+    "analysis"
+  ],
+  "author": "SF Giants Intelligent MCP Server",
+  "license": "MIT"
+}
