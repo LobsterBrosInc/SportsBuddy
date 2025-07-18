@@ -11,7 +11,7 @@ A comprehensive Node.js application for previewing SF Giants baseball games with
 - **📈 Team Momentum Tracking**: AI assessment of performance trends and team direction
 - **🏥 Injury Impact Analysis**: Intelligent evaluation of how injuries affect team performance
 - **🏟️ Modern UI**: Responsive React frontend with TypeScript
-- **🤖 Dual MCP Integration**: Both basic and intelligent MCP servers for different use cases
+- **🤖 MCP Server Integration**: Single AI-powered server for MLB data and analysis
 - **🔌 RESTful API**: Express.js backend with comprehensive endpoints
 - **📝 Shared Types**: TypeScript interfaces shared across all services
 - **🛠️ Development Tools**: ESLint, Prettier, Jest testing framework
@@ -117,7 +117,7 @@ MCP_SERVER_NAME=giants-mcp-server
 USER_AGENT=giants-app/1.0
 API_TIMEOUT=5000
 
-# Intelligent MCP Server (LLM Analysis)
+# MCP Server (LLM Analysis)
 LLM_PROVIDER=anthropic
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 OPENAI_API_KEY=your_openai_api_key_here
@@ -243,13 +243,9 @@ The React client provides an intuitive interface for:
 
 ## 🤖 MCP Server
 
-The project includes two MCP servers:
-
-### 1. Basic MCP Server (`/mcp-server/` - previous version)
-Basic MLB data integration with standard tools and resources.
-
-### 2. Intelligent MCP Server (`/mcp-server/` - **NEW AI-POWERED VERSION**)
-**LLM-powered baseball analysis using Anthropic Claude or OpenAI GPT-4**
+The project uses a single MCP server located in `/mcp-server/`.
+This implementation combines MLB data integration with LLM-powered
+analysis using Anthropic Claude or OpenAI GPT-4.
 
 #### 🧠 AI Analysis Features
 - **Professional Baseball Insights**: Uses LLM to generate expert-level analysis
