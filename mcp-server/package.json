@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "test:example": "node test-example.js",
     "lint": "eslint . --ext .js",
     "format": "prettier --write \"**/*.js\""
@@ -29,7 +29,6 @@
     "prettier": "^3.0.3"
   },
   "jest": {
-    "type": "module",
     "testEnvironment": "node",
     "transform": {}
   },
